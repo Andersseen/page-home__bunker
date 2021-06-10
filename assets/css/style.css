@@ -232,6 +232,23 @@ main{
     margin: 20px 50px;
 }
 
+/* ANIMATED HR */
+
+
+@keyframes animation__rotate {
+    0%{
+        transform: scale(.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hr__animation{
+    animation-duration: .5s;
+    animation-name: animation__rotate;
+}
+/* END ANIMATED HR */
 .footer__brands{
     background-color: white;
     flex: 3;

@@ -13,6 +13,20 @@ const showBrands = () =>{
     });
 }
 
+const showTitleBrands = () =>{
+    let animatedElement = document.querySelectorAll('hr');
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollNesesery = (document.documentElement.scrollHeight / 2) - 50;
+    animatedElement.forEach( el => {
+        if(scrollNesesery < scrollTop){
+            el.classList.add('hr__animation');
+        }
+        if(scrollNesesery > scrollTop){
+            el.classList.remove('hr__animation');
+        }
+    });
+}
+
 const showLabel = () =>{
     let animatedElement = document.querySelector('.section__label');
     let scrollTop = document.documentElement.scrollTop;
@@ -28,7 +42,6 @@ const showLabel = () =>{
 
 const showFooter = () =>{
     let animatedElement = document.querySelectorAll('.footer__block');
-    console.log(animatedElement);
     let scrollTop = document.documentElement.scrollTop;
     let scrollNesesery = (document.documentElement.scrollHeight / 2) - 350;
     animatedElement.forEach( el => {
@@ -42,8 +55,12 @@ const showFooter = () =>{
 }
 
 
+
+
 window.addEventListener('scroll', showFooter);
 
 window.addEventListener('scroll', showBrands);
+
+window.addEventListener('scroll', showTitleBrands);
 
 window.addEventListener('scroll', showLabel);

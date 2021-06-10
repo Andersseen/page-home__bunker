@@ -75,22 +75,21 @@ const slider = (function(){
 		}
 	}
 
-	// Обновить свойства контролов
+
 	function _updateControlsInfo() {
 		const {current, min, max} = itemsInfo.position;
 		controlsInfo.prevButtonDisabled = current > min ? false : true;
 		controlsInfo.nextButtonDisabled = current < max ? false : true;
 	}
 
-	// Создание элементов разметки
-	function _createControls(dots = false, buttons = false) {
+
+	function _createControls(dots = false) {
 		
-		//Обертка для контролов
+
 		sliderContent.append(sliderContentControls);
 
-		// Контролы
+
 		createArrows();
-		buttons ? createButtons() : null;
 		dots ? createDots() : null;
 		
 		// Arrows function
@@ -136,31 +135,16 @@ const slider = (function(){
 			sliderContentControls.append(dotsWrapper);	
 		}
 		
-		// Buttons function
-		function createButtons() {
-			const controlsWrapper = createHTMLElement("div", "slider-controls");
-			prevButton = createHTMLElement("button", "prev-control", "Prev");
-			prevButton.addEventListener("click", () => updateItemsInfo(itemsInfo.position.current - 1))
-			
-			autoButton = createHTMLElement("button", "auto-control", "Auto");
-			autoButton.addEventListener("click", () => {
-				intervalId = setInterval(function(){
-					if (itemsInfo.position.current < itemsInfo.position.max) {
-						itemsInfo.update(itemsInfo.position.current + 1);
-					} else {
-						itemsInfo.reset();
-					}
-					_slideItem();
-				}, itemsInfo.intervalSpeed)
-			})
-
-			nextButton = createHTMLElement("button", "next-control", "Next");
-			nextButton.addEventListener("click", () => updateItemsInfo(itemsInfo.position.current + 1))
-
-			controlsWrapper.append(prevButton, autoButton, nextButton);
-			slider.append(controlsWrapper);
-		}
+		
 	}
+	intervalId = setInterval(function(){
+		if (itemsInfo.position.current < itemsInfo.position.max) {
+			itemsInfo.update(itemsInfo.position.current + 1);
+		} else {
+			itemsInfo.reset();
+		}
+		_slideItem();
+	}, itemsInfo.intervalSpeed)
 
 	function setClass(options) {
 		if (options) {
