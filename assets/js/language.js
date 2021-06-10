@@ -119,7 +119,7 @@ btnLangEs.addEventListener('click', setLang.bind(null, 'es'));
 
 function setLang(lang) {
 
-  let buttonLink = document.querySelector('.btn__primary');
+  let buttonsLinks = document.querySelectorAll('.btn__primary');
 
     if (window.hasOwnProperty('localStorage')) {
         window.localStorage.setItem('lang', lang);
@@ -131,8 +131,10 @@ function setLang(lang) {
           })
           btnLangEn.classList.add('selected');
 
-          buttonLink.href = 'http://www.bunkerseguridad.es/en/';
-
+          buttonsLinks.forEach(el =>{
+            el.href = 'http://www.bunkerseguridad.es/en/';
+          })
+          
           break;
         case 'fr':
           languageButtons.forEach(el => {
@@ -140,7 +142,9 @@ function setLang(lang) {
         })
         btnLangFr.classList.add('selected');
 
-        buttonLink.href = 'http://www.bunkerseguridad.es/fr/';
+        buttonsLinks.forEach(el =>{
+          el.href = 'http://www.bunkerseguridad.es/fr/';
+        })
 
           break;
         case 'pt':
@@ -149,7 +153,9 @@ function setLang(lang) {
         })
         btnLangPt.classList.add('selected');
 
-        buttonLink.href = 'http://www.bunkerseguridad.es/PT/';
+        buttonsLinks.forEach(el =>{
+          el.href = 'http://www.bunkerseguridad.es/PT/';
+        })
 
           break;
         case 'it':
@@ -158,8 +164,9 @@ function setLang(lang) {
         })
         btnLangIt.classList.add('selected');
 
-        buttonLink.href = 'http://www.bunkerseguridad.es/it/';
-
+        buttonsLinks.forEach(el =>{
+          el.href = 'http://www.bunkerseguridad.es/it/';
+        })
           break;
         case 'es':
           languageButtons.forEach(el => {
@@ -167,7 +174,9 @@ function setLang(lang) {
         })
         btnLangEs.classList.add('selected');
 
-        buttonLink.href = 'http://www.bunkerseguridad.es/ES/';
+        buttonsLinks.forEach(el =>{
+          el.href = 'http://www.bunkerseguridad.es/ES/';
+        })
 
           break;
         default:

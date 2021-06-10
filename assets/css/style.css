@@ -16,6 +16,10 @@ a:hover{
 /* 
 *--- SCROLLBAR
 */
+
+::-webkit-scrollbar:horizontal{
+    display: none;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -80,6 +84,7 @@ a:hover{
 body{
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
+
 
 /*
 *--- LANGUAGE
@@ -178,6 +183,68 @@ main{
     font-size: 2.5rem;
 }
 
+/* MAIN COVER ANIMATED */
+
+@keyframes animation__fade-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes animation__fade-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes animation__fade-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes animation__fade-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.main__title-animated{
+    animation-duration: 1s;
+    animation-name: animation__fade-left;
+}
+.main__subtitle-animated{
+    animation-duration: 1s;
+    animation-name: animation__fade-right;
+}
+.main__text-animated{
+    animation-duration: 1s;
+    animation-name: animation__fade-up;
+}
+.main__buttons-animated{
+    animation-duration: 1s;
+    animation-name: animation__fade-down;
+}
+/* END MAIN COVER ANIMATED */
 .main__subtitle{
     font-size: 2rem;
 }
@@ -410,6 +477,46 @@ main{
 
     color: #fff;
 }
+
+/* FOOTER BLOCK ANIMATED */
+.footer__block_1{
+    transform: translateY(500px);
+    transition: transform .5s ease;
+}
+.footer__block_2{
+    transform: translateY(500px);
+    transition: transform .5s ease;
+}
+
+.footer__block_3{
+    transform: translateY(500px);
+    transition: transform .5s ease;
+}
+
+.footer__block_4{
+    transform: translateY(500px);
+    transition: transform .5s ease;
+}
+.footer__block_1-animated{
+    transform: translateY(0);
+}
+.footer__block_2-animated{
+    transform: translateY(0);
+    transition-delay: .2s;
+}
+
+.footer__block_3-animated{
+    transform: translateY(0);
+    transition-delay: .4s;
+}
+
+.footer__block_4-animated{
+    transform: translateY(0);
+    transition-delay: .6s;
+}
+
+/* END FOOTER BLOCK ANIMATED */
+
 .footer__logo{
     margin-top: 50px;
 }
