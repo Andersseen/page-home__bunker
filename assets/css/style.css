@@ -1,0 +1,530 @@
+/* GLOBAL */
+*::selection{
+    background-color: hsl(205, 55%, 70%);
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: aqua;
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* 
+*--- SCROLLBAR
+*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button
+{
+  border-style: solid;
+  height: 16px;
+  width: 16px;
+}
+
+/* Up */
+::-webkit-scrollbar-button:vertical:decrement
+{
+  border-width: 0 7px 14px 7px;
+  border-color: transparent transparent #404040 transparent;
+}
+
+::-webkit-scrollbar-button:vertical:decrement:hover
+{
+  border-color: transparent transparent #505050 transparent;
+}
+
+
+/* Down */
+::-webkit-scrollbar-button:vertical:increment
+{
+  border-width: 14px 7px 0 7px;
+  border-color: #404040 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:increment:hover
+{
+  border-color: #505050 transparent transparent transparent;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 1px 1px 6px hsl(0, 0%, 100%);
+    box-shadow: inset 1px 1px 6px hsl(0, 0%, 100%);
+    background: #73ACE6; 
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(210, 100%, 25%);
+
+  border-radius: 10px;
+
+  transition: background-color .2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(210, 95%, 20%);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: hsl(210, 95%, 15%);
+}
+
+    /* BODY */
+
+body{
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+/*
+*--- LANGUAGE
+*/
+
+.page__header{
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 1000;
+
+    background-color: #003870;
+    
+    width: 200px;
+    border-radius: 20px;
+
+    box-shadow: 1px 1px 3px rgba(29, 63, 97, .5);
+}
+
+.header__language{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+
+    height: 30px;
+}
+
+.header__item{
+    margin: 0 .4%;
+    width: 17px;
+
+    border: 0;
+    background-color: transparent;
+    color: white;
+
+    font-size: .8rem;
+    font-weight: 600;
+    align-self: center;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: color .2s linear;
+    
+}
+.header__item:not(.selected):hover{
+    color:#A9BCCF;
+}
+
+.header__item:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px #fff;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+.header__item.selected:after {
+     transform: scaleX(1); 
+}
+
+
+/* COVER */
+
+main{
+    position: relative;
+    height: 110vh;
+    background-color: #E2E6F1;
+
+    margin-bottom: 90vh;
+}
+
+/* SECTION LABEL */
+.section__label{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: hsl(205, 55%, 70%);;
+}
+.label__title{
+    margin-top: 20px;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.label__logo{
+    transform: scale(.7);
+}
+
+/* ANIMATED LABEL */
+
+@keyframes animation__fade-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0; 
+    }
+    80%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    85%{
+        transform: translateX(-10%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.label__animation{
+    animation-duration: 1s;
+    animation-name: animation__fade-in;
+    animation-timing-function: cubic-bezier(0,1.33,.9,-0.65);
+}
+
+/* END ANIMATED LABEL */
+
+
+/* FOOTER */
+
+.page__footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90vh;
+
+    z-index: -2;
+
+    display: flex;
+    flex-direction: column;
+}
+.footer__brands-title{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.footer__brands-title > hr{
+    height: 3px;
+    width: 200px;
+    background-color: #D6D6D6;
+    border: 0;
+    border-radius: 10px;
+
+    margin: 20px 50px;
+}
+
+.footer__brands{
+    background-color: white;
+    flex: 3;
+}
+.brands__title{
+    font-size: 3rem;
+    color: #004D9A;
+}
+.brands__title > span{
+    font-weight: 700;
+}
+
+.footer__brands-block{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.brand__img{
+    margin: 0 70px;
+    opacity: 0;
+
+}
+
+/* ANIMATED BRANDS */
+
+@keyframes animationScale {
+    0% {
+        transform: scale(.5);
+        opacity: 0; 
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .5; 
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.brand__animation{
+    opacity: 1;
+    animation-duration: 1s;
+    animation-name: animationScale;
+}
+
+/* END ANIMATED BRANDS */
+
+
+.footer__brands-block-2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* FOOTER DOWN PART */
+.footer__container{
+    display: flex;
+    flex-direction: column;
+
+    flex: 2;
+    background-color: #00243D;
+}
+
+.footer__wrapper{
+    display: flex;
+    justify-content: center;
+
+    flex: 6;
+}
+
+.footer__block{
+    width: 10rem;
+
+    margin: 0 30px;
+    text-align: left;
+
+    color: #fff;
+}
+.footer__logo{
+    margin-top: 50px;
+}
+.footer__title{
+    margin-top: 50px;
+    color: #2AA3F2;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.footer__list{
+    margin-top: 20px;
+}
+.footer__item{
+    padding: 5% 0;
+}
+.footer__input{
+    margin: 5% 0;
+    border: 0;
+    background-color: transparent;
+    padding: 5%;
+    border-bottom: 2px solid white;
+    outline: transparent;
+
+    color: white;
+}
+.footer__input:focus{
+
+    border-bottom: 2px solid wheat;
+
+    color: white;
+}
+.footer__block:last-child{
+    width: 15rem;
+}
+.footer__block > small{
+    font-size: .8rem;
+    display: block;
+    margin-bottom: 5%;
+}
+
+.footer__acept{
+    font-size: .8rem;
+}
+/* FOOTER CHECKBOX */
+/* The container */
+.checkbox__container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: .7rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox__container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox__container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox__container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox__container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox__container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/* END FOOTER CHECKBOX */
+
+/* FOOTER BUTTON */
+.footer__btn { 
+    margin: 10px auto;
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+.footer__btn div {
+    position: absolute;
+    background-color: #333;
+    height: 100%;
+    width: 50px;
+    border-radius: 25px;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+.footer__btn div span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 8px;
+    height: 2px;
+    width: 0px;
+    background-color: #fff;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+.footer__btn div span::before {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 10px;
+    background-color: #fff;
+    position:absolute;
+    top: -3px;
+    left: 13px;
+    transform: rotate(45deg);
+}
+.footer__btn div span::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 10px;
+    background-color: #fff;
+    position:absolute;
+    top: 3px;
+    left: 13px;
+    transform: rotate(-45deg);
+}
+.footer__btn:hover div {
+    width: 110%;
+}
+
+.footer__btn:hover div span {
+    left:15%;
+    width: 20px;
+}
+
+.footer__btn p {
+    font-family: 'Mukta', sans-serif;
+    position: absolute;
+    top: calc(50% - 28px);
+    left: calc(50% - 25.5px);
+    top: 17px;
+    z-index: 1;
+    color: #fff;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+.footer__btn:hover p {
+    color: #fff;
+}
+/* END FOOTER BUTTON */
+
+.footer__social{
+    display: flex;
+    justify-content: flex-start;
+}
+.social__logo{
+    width: 30px;
+
+    transform: translate(20px , 10px);
+
+    transition: transform .3s ease;
+}
+
+.social__link:hover .social__logo{
+    transform: rotate(10deg);
+}
+.footer__privacy{
+    display: flex;
+    justify-content: center;
+
+    background-color: #001829;
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
+
