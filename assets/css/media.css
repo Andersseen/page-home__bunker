@@ -34,11 +34,44 @@
         font-size: .8rem;
     }
 
+}
+
+@media only screen and (max-width: 880px) {
+
+    /* MAIN COVER */
+
+    .main__container{
+        width: 60%;
+        align-self: center;
+    
+        margin-top: 15%;
+
+        text-align: center;
+    }
+    .main__text{
+        margin: 10% auto;
+    }
+
+    .main__buttons{
+        width: 100%;
+        align-self: center;
+        display: flex;
+        justify-content: center;  
+    }
 
 }
 
-
 @media only screen and (max-width: 768px) {
+
+    /* MAIN COVER */
+
+    .main__container{
+        margin-top: 25%;
+        width: 80%;
+    }
+    .main__text{
+        width: 90%;
+    }
 
     
 
@@ -86,6 +119,9 @@
 }
 
 @media only screen and (max-width: 467px) {
+    /* MAIN COVER */
+
+    
 
     /* SLIDER */
     .slider__brands-title > hr{

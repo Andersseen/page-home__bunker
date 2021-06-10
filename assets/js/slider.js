@@ -134,8 +134,6 @@ const slider = (function(){
 			}
 			sliderContentControls.append(dotsWrapper);	
 		}
-		
-		
 	}
 	intervalId = setInterval(function(){
 		if (itemsInfo.position.current < itemsInfo.position.max) {
@@ -151,8 +149,6 @@ const slider = (function(){
 			options.forEach(({element, className, disabled}) => {
 				if (element) {
 					disabled ? element.classList.add(className) : element.classList.remove(className)	
-				} else {
-					console.log("Error: function setClass(): element = ", element);
 				}
 			})
 		}
