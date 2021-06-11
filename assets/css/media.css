@@ -64,15 +64,39 @@
 @media only screen and (max-width: 768px) {
 
     /* MAIN COVER */
-
     .main__container{
-        margin-top: 25%;
+        margin: 20% auto auto auto;
         width: 80%;
     }
+    .main__title{
+        font-size: 2rem;
+    }
+    .main__subtitle{
+        font-size: 1.5rem;
+    }
     .main__text{
+        font-size: .8rem;
         width: 90%;
     }
 
+    /* SLIDER */
+    #slider{
+        visibility: visible;
+        opacity: 1;
+        flex: 1;
+    }
+
+    /* FOOTER */
+    .footer__brands{
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    /* SLIDER */
+    .slider-content {
+        margin-top: 0;
+    }
     
 
     /* SECTION LABEL */
@@ -121,6 +145,28 @@
 @media only screen and (max-width: 467px) {
     /* MAIN COVER */
 
+    .main__title{
+        font-size: 1.5rem;
+        margin: auto auto 10px auto;
+    }
+    .main__subtitle{
+        font-size: 1rem;
+        margin: 0;
+    }
+    .main__text{
+        font-size: 14px;
+        width: 90%;
+    }
+
+
+    .main__btn{
+          width: 100px;
+          height: 50px;
+        margin: 0 auto;
+    }
+
+
+
     
 
     /* SLIDER */
@@ -133,7 +179,9 @@
     /* FOOTER */
     .footer__block{ 
         margin: 0 10px;
+        transform: scale(.8);
 
     }
+
 
 }

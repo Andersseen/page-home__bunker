@@ -1,5 +1,6 @@
-        //SHOW COVER ANIMATED
 
+
+//SHOW COVER ANIMATED
 const showCover = () => {
     let coverTitle = document.querySelector('.main__title');
     let coverSubtitle = document.querySelector('.main__subtitle');
@@ -25,7 +26,9 @@ const showCover = () => {
 const showBrands = () =>{
     let animatedElement = document.querySelectorAll('.brand__img');
     let scrollTop = document.documentElement.scrollTop;
+
     let scrollNesesery = (document.documentElement.scrollHeight / 2) - 150;
+
     animatedElement.forEach( el => {
         if(scrollNesesery < scrollTop){
             el.classList.add('brand__animation');
@@ -90,17 +93,10 @@ const showFooter = () =>{
 
 }
 
-        //SHOW COVER ANIMATED
-window.addEventListener('scroll', showCover);
-
-        //SHOW FOOTER ANIMATED
-
-        
-
-window.addEventListener('scroll', showFooter);
-
-window.addEventListener('scroll', showBrands);
-
-window.addEventListener('scroll', showTitleBrands);
-
-window.addEventListener('scroll', showLabel);
+window.onscroll = () => {
+    showCover()
+    showFooter()
+    showBrands()
+    showTitleBrands()
+    showLabel()
+}
