@@ -1,5 +1,6 @@
 const arrLang = {
   'en': {
+    'header__language': 'Choose your language!',
 
     // MAIN COVER
     'cover__title' : 'Manufacturer of perimeter intrusion detection systems',
@@ -20,6 +21,7 @@ const arrLang = {
     'footer__privacy': 'Privacy Policy',
   },
   'fr': {
+    'header__language': 'Choisissez votre langue !',
 
     // MAIN COVER
     'cover__title' : 'Fabricant de systèmes de détection des intrusions dans le périmètre',
@@ -40,6 +42,7 @@ const arrLang = {
     'footer__privacy': 'Politique de confidentialité',
   },
   'pt': {
+    'header__language': 'Escolha a sua língua!',
 
     // MAIN COVER
     'cover__title' : 'Fabricante de sistemas de detecção de intrusão perimetral',
@@ -60,6 +63,7 @@ const arrLang = {
     'footer__privacy': 'Política de Privacidade',
   },
   'it': {
+    'header__language': 'Scegliete la vostra lingua!',
 
     // MAIN COVER
     'cover__title' : 'Produttore di sistemi di rilevamento delle intrusioni perimetrali',
@@ -80,6 +84,7 @@ const arrLang = {
     'footer__privacy': 'Politica sulla privacy',
   },
   'es': {
+    'header__language': '¡Elija su idioma!',
 
     // MAIN COVER
     'cover__title' : 'Fabricante de sistemas de detección de intrusión perimetral',
