@@ -165,10 +165,6 @@
         margin: 0 auto;
     }
 
-
-
-    
-
     /* SLIDER */
     .slider__brands-title > hr{
         display: none;
@@ -180,8 +176,29 @@
     .footer__block{ 
         margin: 0 10px;
         transform: scale(.8);
-
     }
-
-
 }
+
+@media only screen and (max-width: 540px) {
+    .page__header{
+        top: 40px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .page__header{
+        top: 35px;
+    } 
+}
+
+@media only screen and (max-width: 320px) {
+    .page__header{
+        top: 30px;
+    } 
+}
+@media only screen and (max-width: 280px) {
+    .page__header{
+        right: 0;
+        top: 30px;
+    }
+}
+

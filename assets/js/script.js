@@ -4,20 +4,22 @@
 const showCover = () => {
     let coverTitle = document.querySelector('.main__title');
     let coverSubtitle = document.querySelector('.main__subtitle');
-    let coverText = document.querySelector('.main__text');
+    let coverText = document.querySelectorAll('.main__text');
     let coverButttons = document.querySelector('.main__buttons');
 
     let scrollTop = document.documentElement.scrollTop;
         if(scrollTop == 0){
             coverTitle.classList.add('main__title-animated');
-            coverSubtitle.classList.add('main__subtitle-animated');
-            coverText.classList.add('main__text-animated');
+            coverText.forEach(el =>{
+                el.classList.add('main__text-animated');
+            })
             coverButttons.classList.add('main__buttons-animated');
         }
         if(scrollTop > 0){
             coverTitle.classList.remove('main__title-animated');
-            coverSubtitle.classList.remove('main__subtitle-animated');
-            coverText.classList.remove('main__text-animated');
+            coverText.forEach(el =>{
+                el.classList.remove('main__text-animated');
+            })
             coverButttons.classList.remove('main__buttons-animated');
             
         }
@@ -67,8 +69,6 @@ const showLabel = () =>{
 }
 
 const showFooter = () =>{
-
-    let footerBlocks = document.querySelectorAll('.footer__block');
 
     let animatedFooterBlock_1 = document.querySelector('.footer__block_1');
     let animatedFooterBlock_2 = document.querySelector('.footer__block_2');
