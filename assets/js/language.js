@@ -13,6 +13,7 @@ const arrLang = {
     'footer__accept': 'Acceptance of privacy',
     'footer__btn': 'Join now!',
     'footer__checkbox' : 'I confirm that I have read and agree to the terms and conditions and',
+    'footer__checkbox-link' : ' privacy statement',
 
     // FOOTER privacy
     'footer__copyrate': '©2021 Bunker Seguridad Electrónica S.L. All rights reserved',
@@ -25,8 +26,8 @@ const arrLang = {
 
     // MAIN COVER
     'cover__title' : 'Protection du périmètre',
-    'cover__text-1': 'A Bunker Seguridad Electrónica S.L. é uma empresa espanhola, fabricante de sistemas de detecção de perímetro, especializada em torres de feixe fotoeléctrico e sistemas anti-intrusão.',
-    'cover__text-2': 'Distribuímos Soluções de Segurança, Detecção de Intrusão, Transmissão de Dados e Análise de Vídeo. A nossa estreita colaboração com as marcas mais prestigiadas no mercado internacional de segurança permite-nos oferecer a tecnologia mais adequada para diferentes níveis de segurança e necessidades específicas.',
+    'cover__text-1': 'Bunker Seguridad Electrónica S.L. est une entreprise espagnole, fabricant de systèmes de protection périmétrique et de détection d\'intrusion, également spécialisée dans les colonnes pour le montage de capteurs photoélectriques et de systèmes de détection d\'intrusion.',
+    'cover__text-2': 'Nous sommes distributeurs de solutions de protection, de détection d\'intrusion, de transmission de données et d\'analyse vidéo. Notre étroite collaboration avec les marques les plus prestigieuses du marché international de la sécurité nous permet de proposer la technologie la plus adaptée à chaque besoin spécifique et à chaque niveau de sécurité requis.',
     'btn__primary' : 'Site Web',
     'btn__secondary' : 'Chaîne YouTube',
 
@@ -34,6 +35,7 @@ const arrLang = {
     'footer__accept': 'Acceptation de la vie privée',
     'footer__btn': 'Adhérez maintenant!',
     'footer__checkbox' : 'Je confirme que jai lu et que jaccepte les termes et conditions et',
+    'footer__checkbox-link' : ' déclaration de confidentialité',
 
     // FOOTER privacy
     'footer__copyrate': '©2021 Bunker Seguridad Electrónica S.L. Tous droits réservés.',
@@ -46,8 +48,8 @@ const arrLang = {
 
     // MAIN COVER
     'cover__title' : 'Protecção perimetral',
-    'cover__text-1': 'Bunker Seguridad Electrónica S.L. is a Spanish company, manufacturer of perimeter detection systems, specialised in photoelectric beam towers and anti-intrusion systems.',
-    'cover__text-2': 'We distribute Security, Intrusion Detection, Data transmission and Video Analytics Solutions. Our close collaboration with the most prestigious brands in the international security market makes it possible for us to offer the most suitable technology for different levels of security and specific needs.',
+    'cover__text-1': 'Bunker Seguridad Electrónica S.L. é uma empresa espanhola, fabricante de sistemas de protecção perimetral e de detecção de intrusão, também especializada em colunas para a montagem de sensores fotoeléctricos e sistemas de detecção de intrusão.',
+    'cover__text-2': 'Somos distribuidores de soluções de protecção, detecção de intrusão, transmissão de dados e análise de vídeo. A nossa estreita colaboração com as marcas mais prestigiadas no mercado internacional da segurança permite-nos oferecer a tecnologia mais adequada para cada necessidade específica e para cada nível de segurança exigido.',
     'btn__primary' : 'Sítio Web',
     'btn__secondary' : 'Canal YouTube',
 
@@ -55,6 +57,7 @@ const arrLang = {
     'footer__accept': 'Aceitação da privacidade',
     'footer__btn': 'Junte-se agora!',
     'footer__checkbox' : 'I confirm that I have read and agree to the terms and conditions and',
+    'footer__checkbox-link' : ' declaração de privacidade',
 
     // FOOTER privacy
     'footer__copyrate': '©2021 Bunker Seguridad Electrónica S.L. Todos os direitos reservados.',
@@ -67,15 +70,16 @@ const arrLang = {
 
     // MAIN COVER
     'cover__title' : 'Protezione perimetrale',
-    'cover__text-1': 'Bunker Seguridad Electrónica S.L. is a Spanish company, manufacturer of perimeter detection systems, specialised in photoelectric beam towers and anti-intrusion systems.',
-    'cover__text-2': 'We distribute Security, Intrusion Detection, Data transmission and Video Analytics Solutions. Our close collaboration with the most prestigious brands in the international security market makes it possible for us to offer the most suitable technology for different levels of security and specific needs.',
-    'btn__primary' : 'Sito web',
+    'cover__text-1': 'Bunker Seguridad Electrónica S.L. è un\'azienda Spagnola, fabbricante di impianti per la protezione perimetrale e di sistemi di rilevazione delle intrusioni, altresí specializzata in colonne per il montaggio di sensori fotoelettrici e sistemi antintrusione.',
+    'cover__text-2': 'Siamo distributori di soluzioni di protezione, rilevamento intrusioni, trasmissione dati e analisi video. La nostra stretta collaborazione con le marche più prestigiose del mercato internazionale della sicurezza ci permette di offrire le tecnologia più idonea ad ogni specifica esigenza e ad ogni grado di sicurezza richiesto.',
+    'btn__primary' : 'Sito Web',
     'btn__secondary' : 'Canale YouTube',
 
     //FOOTER wrapper
     'footer__accept': 'Accettazione della privacy',
     'footer__btn': 'Partecipa ora!',
     'footer__checkbox' : 'Confermo di aver letto e accettato i termini e le condizioni e',
+    'footer__checkbox-link' : ' dichiarazione sulla privacy',
 
     // FOOTER privacy
     'footer__copyrate': '©2021 Bunker Seguridad Electrónica S.L. Tutti i diritti riservati.',
@@ -97,6 +101,7 @@ const arrLang = {
     'footer__accept': 'Aceptación de la privacidad',
     'footer__btn': '¡Únase ahora!',
     'footer__checkbox' : 'Confirmo que he leído y acepto las condiciones y',
+    'footer__checkbox-link' : ' declaración de privacidad',
 
     // FOOTER privacy
     'footer__copyrate': '©2021 Bunker Seguridad Electrónica S.L. Todos los derechos reservados',
